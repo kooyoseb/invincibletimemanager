@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "invincibletimemanager",
+	"version": "${version}",
+	"name": "InvincibleTimeManager",
+	"description": "Creates and manages a datapack tag that removes invulnerability time for selected damage types.",
+	"authors": [
+		"Kooyoseb"
+	],
+	"contact": {},
+	"license": "CC0-1.0",
+	"icon": "assets/invincibletimemanager/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kooyoseb.invincibletimemanager.InvincibleTimeManager"
+		],
+		"client": [
+			"com.kooyoseb.invincibletimemanager.client.InvincibleTimeManagerClient"
+		]
+	},
+	"mixins": [
+		"invincibletimemanager.mixins.json",
+		{
+			"config": "invincibletimemanager.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
